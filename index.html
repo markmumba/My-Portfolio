@@ -39,21 +39,14 @@
 
         <div class="container">
             <div class="dev">
-                <p>HI,<br>
-                    I AM A FULLSTACK WEB
-                    <span class="animated slideInUp  delay-2s">D</span><span
-                        class="animated slideInDown delay-2s">E</span><span
-                        class="animated slideInUp delay-2s">V</span><span
-                        class="animated slideInDown delay-2s">E</span><span
-                        class="animated slideInUp  delay-2s">L</span><span
-                        class="animated slideInDown delay-2s">O</span><span
-                        class="animated slideInUp delay-2s">P</span><span
-                        class="animated slideInDown delay-2s">E</span><span class="animated slideInUp delay-2s">R</span>
+                <p><div class="animated fadeInDown delay-1s">HI,</div>
+                    <div class="animated fadeInLeft delay-2s">I AM A FULLSTACK WEB</div>
+                    <div class="animated fadeInUp delay-3s">DEVELOPER</div>
                 </p>
             </div>
         </div>
         <div class="button">
-            <a href="#projects"><button class="btn btn4">See My Projects</button></a>
+            <a href="#projects"><button id="animatedBtn" class="btn btn4">See My Projects</button></a>
         </div>
     </div>
     <div id="projects"
@@ -64,25 +57,25 @@
 
         <div class="container ">
             <div class="row">
-                <div class="col-md-6">
+                <div class="col-md-6 col-sm-4col-xs-">
                     <ul style="list-style-type: none;">
                         <li>
-                            <a class="animated fadeInLeft delay-2s"
+                            <a ' class=" animated fadeInLeft delay-1s"
                                 style="text-decoration: none; color: white;font-family: 'Asap', sans-serif;" href="">GIT
                                 SEARCH <img src="icons/next.png"></a>
                         </li>
                         <li>
-                            <a style="text-decoration: none; color: white;font-family: 'Asap', sans-serif;"
+                            <a   class=" animated fadeInLeft delay-2s" style="text-decoration: none; color: white;font-family: 'Asap', sans-serif;"
                                 href="">INSTAGRAM<img src="icons/next.png">
                             </a>
                         </li>
                         <li>
-                            <a style="text-decoration: none; color: white;font-family: 'Asap', sans-serif;"
+                            <a class=" animated fadeInLeft delay-3s"style="text-decoration: none; color: white;font-family: 'Asap', sans-serif;"
                                 href="">AWARDS<img src="icons/next.png">
                             </a>
                         </li>
                         <li>
-                            <a style="text-decoration: none; color: white;font-family: 'Asap', sans-serif;"
+                            <a class=" animated fadeInLeft delay-4s"style="text-decoration: none; color: white;font-family: 'Asap', sans-serif;"
                                 href="">PITCH<img src="icons/next.png">
                             </a>
                         </li>
@@ -94,9 +87,22 @@
 
 
 
+<div class="container">
+    <div class="about">
+        
+    </div>
+</div>
 
 
-    <div></div>
+
+
+
+
+
+
+
+
+
 
 
 
@@ -141,6 +147,24 @@
         function closeNav() {
             document.getElementById("myNav").style.height = "0%";
         }
+
+        $(function () {
+
+            $('#animated').click(function () {
+                animate('#one', 'fadeInLeft');
+                return false
+            });
+
+
+            function animate(element, animation) {
+                $(element).addClass("animated" + animation)
+                var wait = setTimeout(function () {
+                    $(element).removeClass("animated" + animation);
+                }, 2000);
+            }
+        })
+
+
     </script>
 </body>
 
