@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 .overlay {
   height: 0%;
   width: 100%;
@@ -111,4 +115,20 @@
 .button {
   padding-left: 800px;
   padding-top: 200px;
+}
+
+
+
+#projects {
+  font-size: 60px;
+  color: #f1f1f1;
+}
+
+.proj {
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 60px;
+  font-weight: 950;
+  padding-left: 0px;
+  text-align: center
 }
