@@ -18,6 +18,7 @@
   <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/index.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:700&display=swap" rel="stylesheet">
 
   <title>My Portfolio</title>
 </head>
@@ -26,18 +27,17 @@
   <!-- creating the nav bar -->
   <div class="homepage"
     style="background: url(https://images.unsplash.com/photo-1526289034009-0240ddb68ce3?ixlib=rb-1.2.1&auto=format&fit=crop&w=1351&q=80) center center no-repeat; background-size: 100%; height: 1000px; background-attachment: fixed;">
-    <div id="myNav" class="overlay">
-      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-      <div class="overlay-content" style="font-family: 'Montserrat', sans-serif; font-size: 30px;">
-        <a href="#">Home</a>
-        <a href="#">About</a>
-        <a href="#">Projects</a>
-        <a href="#">Contacts</a>
-      </div>
+    <div id="mySidebar" class="sidebar">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+      <a href="#">About</a>
+      <a href="#">Services</a>
+      <a href="#">Clients</a>
+      <a href="#">Contact</a>
     </div>
-    <span style="font-size:30px;cursor:pointer" onclick="openNav()"><img
-        src="icons/menu-button-of-three-horizontal-lines.png"></span>
 
+    <div id="main">
+      <button class="openbtn" onclick="openNav()">☰ </button>
+    </div>
     <div class="container">
       <div class="dev">
         <p>
@@ -57,19 +57,25 @@
   <br>
   <div class="about">
     <div class="row">
-        <div class="col-2"></div>
-      <div class="col-4" style="text-align: center; font-family: 'Raleway', sans-serif;font-weight:100 ;">
-        <h1>Objective</h1>
+      <div class="col-2"></div>
+      <div class="col-4" style="text-align: center; font-family: 'Raleway', sans-serif;font-weight:100 ;padding-top: 5%;">
+        <h1 style="font-family: 'Roboto', sans-serif;">Objective</h1>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, dolores! Nostrum veniam consequuntur harum
         praesentium vero odit cum non, quae aut enim porro soluta saepe sed atque nulla eaque officiis!
-        <h2>Passions</h2>
+        <h2 style="font-family: 'Roboto', sans-serif; font-size: 40px;">Passions</h2>
         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusamus nulla reprehenderit at vero assumenda
         ducimus possimus velit praesentium qui quaerat? Laborum culpa animi in facere aperiam distinctio obcaecati,
         cupiditate eum!
       </div>
       <div class="col-2"></div>
       <div class="col-4">
-      <img class="circular--square" src="images/isabella-juskova-SQszo1mP4sk-unsplash.jpg" />
+        <img class="circular--square" src="images/isabella-juskova-SQszo1mP4sk-unsplash.jpg" />
+        <div class="myself" style="text-align: center;font-family: 'Roboto', sans-serif; font-weight: 900;">
+          <p> Hi I'm<br>
+           MarkIan Mumba<br>
+           Fullstack developer
+           </p>
+        </div>
       </div>
     </div>
   </div>
@@ -89,8 +95,8 @@
         <div class="col-md-6 col-sm-4col-xs-">
           <ul style="list-style-type: none;">
             <li>
-              <a ' class=" animated fadeInLeft delay-1s"
-                                style="text-decoration: none; color: white;font-family: ' Asap', sans-serif;"
+              <a  class=" animated fadeInLeft delay-1s"
+                  style="text-decoration: none; color: white;font-family: ' Asap', sans-serif;"
                 href="">GIT
                 SEARCH <img src="icons/next.png"></a>
             </li>
@@ -135,68 +141,32 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   <script>
     function openNav() {
-      document.getElementById("myNav").style.height = "100%";
+      document.getElementById("mySidebar").style.width = "250px";
+      document.getElementById("main").style.marginLeft = "250px";
     }
 
     function closeNav() {
-      document.getElementById("myNav").style.height = "0%";
+      document.getElementById("mySidebar").style.width = "0";
+      document.getElementById("main").style.marginLeft = "0";
     }
+    window.onscroll = function () { myFunction() };
 
-    $(function () {
+    // Get the navbar
+    var navbar = document.getElementById("main");
 
-      $('#animated').click(function () {
-        animate('#one', 'fadeInLeft');
-        return false
-      });
+    // Get the offset position of the navbar
+    var sticky = navbar.offsetTop;
 
-
-      function animate(element, animation) {
-        $(element).addClass("animated" + animation)
-        var wait = setTimeout(function () {
-          $(element).removeClass("animated" + animation);
-        }, 2000);
+    // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+    function myFunction() {
+      if (window.pageYOffset >= sticky) {
+        navbar.classList.add("sticky")
+      } else {
+        navbar.classList.remove("sticky");
       }
-    })
-
+    }
 
   </script>
 </body>
