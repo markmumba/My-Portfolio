@@ -141,17 +141,10 @@ ul a:hover {
   color: yellow;
   cursor: pointer;
 }
-.image-cropper {
-    width: 100px;
-    height: 100px;
-    position: relative;
-    overflow: hidden;
-    border-radius: 50%;
-}
-.profile-pic {
-  display: inline;
-  margin: 0 auto;
-  margin-left: -25%;
-  height: 100%;
-  width: auto;
+.circular--square {
+  border-radius: 50%;
+  height: 300px;
+  width: 300px;
+  
+
 }
