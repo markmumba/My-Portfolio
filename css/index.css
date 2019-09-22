@@ -85,42 +85,11 @@ html {
   overflow: hidden;
 }
 
-.btn3, .btn4 {
-  color: #fff;
+.btn4 {
+  color: black;
 }
-
-.btn::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  width: 100%;
-  height: 0%;
-  background: #f3f6f8;
-  z-index: -1;
-  transition: 0.8s;
-}
-
-.btn1::before, .btn3::before {
-  top: 0;
-  border-radius: 0 0 50% 50%;
-}
-
-.btn2::before, .btn4::before {
-  bottom: 0;
-  border-radius: 50% 50% 0 0;
-}
-
-.btn3::before, .btn4::before {
-  height: 180%;
-}
-
-.btn3:hover::before, .btn4:hover::before {
-  height: 0%;
-}
-
-.button {
-  padding-left: 800px;
-  padding-top: 200px;
+.btn{
+  margin-left: 400px;
 }
 
 #projects {
