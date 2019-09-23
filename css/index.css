@@ -1,6 +1,7 @@
 html {
   scroll-behavior: smooth;
 }
+/* My navigation bar  styling */
 .sidebar {
   height: 100%;
   width: 0;
@@ -58,18 +59,19 @@ html {
   .sidebar {padding-top: 15px;}
   .sidebar a {font-size: 18px;}
 }
+/* Making the navigation bar stick */
 .sticky {
   position: fixed;
   top: 0;
   width: 100%;
 }
+/* The developer words */
 .dev {
   color: antiquewhite;
   font-family: 'Montserrat', sans-serif;
   font-size: 60px;
   font-weight: 950;
-  padding-top: 300px;
-  padding-left: 0px;
+  
 }
 
 .btn {
@@ -108,11 +110,13 @@ html {
 
 ul a {
   display: inline-block;
+  transition: margin-left .5s;
   -webkit-transition: all 0.1s ease-out;
 }
 
 ul a:hover {
   -webkit-transform: scale(1.5);
+  
   color: yellow;
   cursor: pointer;
 }
