@@ -1,6 +1,9 @@
 html {
   scroll-behavior: smooth;
 }
+body{
+  overflow-x: hidden;
+}
 
 /* My navigation bar  styling */
 
@@ -127,9 +130,10 @@ ul a {
 }
 
 ul a:hover {
+  
   -webkit-transform: scale(1.5);
   color: yellow;
-  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+ 
   cursor: pointer;
 }
 
